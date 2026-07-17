@@ -32,9 +32,7 @@ class Interval:
         u_str = "∞" if self.is_unbounded else str(self.u)
         return f"[{self.l}, {u_str}]"
 
-
-
-# Convenient factory helpers
+# Factor for separate actor
 def bounded(l: float, u: float) -> Interval:
     return Interval(l, u)
 
