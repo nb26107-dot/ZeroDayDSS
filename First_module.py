@@ -32,3 +32,12 @@ class Interval:
         u_str = "∞" if self.is_unbounded else str(self.u)
         return f"[{self.l}, {u_str}]"
 
+
+
+# Convenient factory helpers
+def bounded(l: float, u: float) -> Interval:
+    return Interval(l, u)
+
+def unbounded(l: float) -> Interval:
+    return Interval(l, INF)
+
